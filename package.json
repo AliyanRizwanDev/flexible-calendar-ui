@@ -7,11 +7,11 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/flexible-calendar-ui"
+    "url": "https://github.com/AliyanRizwanDev/flexible-calendar-ui"
   },
-  "homepage": "https://github.com/yourusername/flexible-calendar-ui#readme",
+  "homepage": "https://github.com/AliyanRizwanDev/flexible-calendar-ui#readme",
   "bugs": {
-    "url": "https://github.com/yourusername/flexible-calendar-ui/issues"
+    "url": "https://github.com/AliyanRizwanDev/flexible-calendar-ui/issues"
   },
   "files": [
     "dist"
@@ -19,13 +19,14 @@
     "build": "rollup -c",
     "clean": "rimraf dist",
     "dev": "rollup -c -w",
-    "demo": "parcel demo.html --open",
-    "build:demo": "parcel build demo/index.html --out-dir demo-dist",
+    "demo": "vite --config vite.config.js",
+    "build:demo": "vite build --config vite.config.js",
     "deploy:demo": "gh-pages -d demo-dist",
     "prebuild": "npm run clean",
     "prepublishOnly": "npm run build",
     "test": "echo \"No tests specified\"",
-    "build:docs": "typedoc --out docs src/index.ts"
+    "build:docs": "typedoc --out docs src/index.ts",
+    "vercel:build": "npm run build:demo"
   },"keywords": [
     "react",
     "calendar",
@@ -59,12 +60,15 @@
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.0.0",
     "parcel": "^2.9.3",
     "postcss": "^8.4.14",
     "rimraf": "^3.0.2",
     "rollup": "^2.75.6",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.3",
+    "vite": "^5.1.0"
   }
 }

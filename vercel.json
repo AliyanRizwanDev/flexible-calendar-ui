@@ -1,0 +1,16 @@
+{
+  "name": "flexible-calendar-ui-demo",
+  "version": 2,
+  "builds": [
+    {
+      "src": "demo/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { 
+      "src": "/(.*)", 
+      "dest": "/demo/index.html" 
+    }
+  ]
+}

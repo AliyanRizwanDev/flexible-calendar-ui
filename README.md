@@ -4,7 +4,8 @@
   
   [![npm version](https://img.shields.io/npm/v/flexible-calendar-ui.svg?style=flat-square)](https://www.npmjs.com/package/flexible-calendar-ui)
   [![npm downloads](https://img.shields.io/npm/dm/flexible-calendar-ui.svg?style=flat-square)](https://www.npmjs.com/package/flexible-calendar-ui)
-  [![license](https://img.shields.io/npm/l/flexible-calendar-ui.svg?style=flat-square)](https://github.com/yourusername/flexible-calendar-ui/blob/main/LICENSE)
+  [![license](https://img.shields.io/npm/l/flexible-calendar-ui.svg?style=flat-square)](https://github.com/AliyanRizwanDev/flexible-calendar-ui/blob/main/LICENSE)
+  [![Vercel Demo](https://img.shields.io/badge/demo-online-brightgreen.svg?style=flat-square)](https://flexible-calendar-ui.vercel.app)
   
   <img src="https://i.ibb.co/K7NbTq2/Calendar-Demo.png" alt="Calendar Demo" width="600" />
 </div>
