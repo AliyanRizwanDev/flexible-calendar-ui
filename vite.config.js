@@ -9,7 +9,17 @@ export default defineConfig({
   publicDir: './public',
   build: {
     outDir: '../demo-dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    minify: 'terser',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          icons: ['react-icons']
+        }
+      }
+    }
   },
   resolve: {
     alias: {
