@@ -15,14 +15,13 @@
   },
   "files": [
     "dist"
-  ],
-  "scripts": {
+  ],  "scripts": {
     "build": "rollup -c",
     "clean": "rimraf dist",
     "dev": "rollup -c -w",
     "demo": "vite --config vite.config.js",
     "build:demo": "vite build --config vite.config.js",
-    "deploy:demo": "gh-pages -d demo-dist",
+    "deploy": "vercel --prod",
     "prebuild": "npm run clean",
     "prepublishOnly": "npm run build",
     "test": "echo \"No tests specified\"",

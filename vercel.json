@@ -3,10 +3,16 @@
   "version": 2,
   "buildCommand": "npm run build:demo",
   "outputDirectory": "demo-dist",
+  "public": true,
+  "installCommand": "npm install",
   "routes": [
     { 
       "src": "/(.*)", 
       "dest": "/" 
     }
-  ]
+  ],
+  "github": {
+    "enabled": false,
+    "silent": true
+  }
 }
