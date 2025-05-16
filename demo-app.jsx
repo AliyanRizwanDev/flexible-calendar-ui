@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Calendar, YearCalendar, CalendarContainer } from './src';
-import './src/styles.css';
-
+import '../src/App.css';
 const DemoApp = () => {
   const [view, setView] = useState('month');
   
