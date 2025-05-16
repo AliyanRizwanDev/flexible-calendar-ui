@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Calendar UI - Demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+    .header {
+      background: linear-gradient(to right, #0070bf, #00a0e9);
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .header p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .demo-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px 5rem;
+    }
+    .feature-section {
+      padding: 4rem 0;
+      background-color: #f8f9fa;
+      margin: 3rem 0;
+      border-radius: 10px;
+    }
+    .feature-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      color: #0070bf;
+    }
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #0070bf;
+      margin-bottom: 1rem;
+    }
+    .cta-section {
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .cta-btn {
+      background: #0070bf;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .cta-btn:hover {
+      background: #005b99;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .code-block {
+      background: #f5f7f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+    pre {
+      margin: 0;
+    }
+    .theme-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .theme-preview {
+      flex: 0 0 calc(33.333% - 10px);
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    .theme-header {
+      padding: 15px;
+      font-weight: 600;
+      border-bottom: 1px solid #eee;
+    }
+    .theme-img {
+      padding: 15px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .theme-img img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Flexible Calendar UI</h1>
+    <p>A beautiful, highly customizable React calendar component library</p>
+  </div>
+  
+  <div class="demo-container">
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <h2>Quick Start</h2>
+        <div class="code-block">
+          <pre><code>
+npm install flexible-calendar-ui
+
+# or
+yarn add flexible-calendar-ui</code></pre>
+        </div>
+        <div class="code-block">
+          <pre><code>
+import { Calendar, CalendarContainer } from 'flexible-calendar-ui';
+import 'flexible-calendar-ui/dist/styles.css';
+
+function App() {
+  return (
+    &lt;CalendarContainer&gt;
+      &lt;Calendar /&gt;
+    &lt;/CalendarContainer&gt;
+  );
+}</code></pre>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="calendar-demo"></div>
+      </div>
+    </div>
+    
+    <div class="feature-section">
+      <h2 class="text-center mb-5">Features</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3>Multiple Views</h3>
+            <p>Switch between monthly and yearly calendar views to suit your needs. Easily navigate between months and years.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Customizable Themes</h3>
+            <p>Customize colors, borders, and styles to match your application's design system perfectly.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Works beautifully on all devices from desktops to mobile phones with adaptive layouts.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Attendance Tracking</h3>
+            <p>Built-in support for tracking attendance and displaying different statuses like present, absent, or on leave.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">🏖️</div>
+            <h3>Holiday Support</h3>
+            <p>Mark holidays and special days with custom labels and styling to make them stand out.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Lightweight</h3>
+            <p>Optimized bundle size with minimal dependencies for fast loading times and smooth performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h2 class="text-center mb-5">Beautiful Themes</h2>
+    <p class="text-center mb-4">Choose from several built-in themes or create your own to match your brand.</p>
+    
+    <div class="theme-gallery">
+      <div class="theme-preview">
+        <div class="theme-header">Default Theme</div>
+        <div class="theme-img">
+          <img src="https://i.ibb.co/K7NbTq2/Calendar-Demo.png" alt="Default Theme">
+        </div>
+      </div>
+      <div class="theme-preview">
+        <div class="theme-header">Dark Theme</div>
+        <div class="theme-img">
+          <img src="https://i.ibb.co/K7NbTq2/Calendar-Demo.png" alt="Dark Theme">
+        </div>
+      </div>
+      <div class="theme-preview">
+        <div class="theme-header">Pastel Theme</div>
+        <div class="theme-img">
+          <img src="https://i.ibb.co/K7NbTq2/Calendar-Demo.png" alt="Pastel Theme">
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta-section">
+      <h2 class="mb-4">Ready to get started?</h2>
+      <p class="mb-5">Try Flexible Calendar UI in your React project today!</p>
+      <a href="https://github.com/yourusername/flexible-calendar-ui" class="cta-btn">GitHub Repository</a>
+      <a href="https://www.npmjs.com/package/flexible-calendar-ui" class="cta-btn ms-3">NPM Package</a>
+    </div>
+  </div>
+  
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">© 2025 Flexible Calendar UI. MIT Licensed.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
