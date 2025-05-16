@@ -15,7 +15,8 @@
   },
   "files": [
     "dist"
-  ],  "scripts": {
+  ],
+  "scripts": {
     "build": "rollup -c",
     "clean": "rimraf dist",
     "dev": "rollup -c -w",
@@ -27,7 +28,8 @@
     "test": "echo \"No tests specified\"",
     "build:docs": "typedoc --out docs src/index.ts",
     "vercel:build": "vite build --config vite.config.js"
-  },"keywords": [
+  },
+  "keywords": [
     "react",
     "calendar",
     "attendance",
@@ -54,13 +56,14 @@
   "dependencies": {
     "dayjs": "^1.11.13",
     "react-icons": "^5.5.0"
-  },  "devDependencies": {
+  },
+  "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "^4.4.1",
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.14",
     "rimraf": "^3.0.2",
